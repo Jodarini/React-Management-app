@@ -1,0 +1,86 @@
+{
+  "articles": [
+    {
+      "categoria": "Bolsos",
+      "nombre": "Bolso grande",
+      "referencia": "123123123e",
+      "precio": "70000",
+      "talla": "L",
+      "cantidad": "1",
+      "id": "xCXasrZ6kU_O4nasdUvbECNS"
+    },
+    {
+      "id": 33,
+      "categoria": "Busos",
+      "nombre": "Buso grande",
+      "referencia": "akjgfhkgjhk23",
+      "precio": "45000",
+      "talla": "M",
+      "cantidad": "5"
+    },
+    {
+      "categoria": "Camisetas",
+      "nombre": "Camiseta",
+      "referencia": "qtwreterwt123",
+      "precio": "20000",
+      "talla": "xs",
+      "cantidad": "1",
+      "id": "xCXasrZ6kU_O4nnbcvnUvbECNS"
+    },
+    {
+      "categoria": "Camisetas",
+      "nombre": "Camiseta AZUL",
+      "referencia": "dhgfjhgf",
+      "precio": "15000",
+      "talla": "xs",
+      "cantidad": "1",
+      "id": "xCXasrZ6kU_O4tertyrUvbECNS"
+    },
+    {
+      "id": 32,
+      "categoria": "Busos",
+      "nombre": "Buso pequeño",
+      "referencia": "asd123as123",
+      "precio": "45000",
+      "talla": "M",
+      "cantidad": "5"
+    },
+    {
+      "id": 31,
+      "categoria": "Busos",
+      "nombre": "Buso largo",
+      "referencia": "asdasdqwe3",
+      "precio": "45000",
+      "talla": "M",
+      "cantidad": "5",
+      "isChecked": false
+    },
+    {
+      "id": 37,
+      "categoria": "Busos",
+      "nombre": "Buso negro",
+      "referencia": "asd123",
+      "precio": "45000",
+      "talla": "M",
+      "cantidad": "5"
+    },
+    {
+      "categoria": "Pantalones",
+      "nombre": "Pantalon azules",
+      "referencia": "e123asd",
+      "precio": "45000",
+      "talla": "XL",
+      "cantidad": "1",
+      "id": "xCXsfdhdjasrZ6kU_O4nUvbECNS"
+    },
+    {
+      "categoria": "asd",
+      "nombre": "asd",
+      "referencia": "sad",
+      "precio": "sad",
+      "talla": "asd",
+      "cantidad": "1",
+      "id": "Nqf-3Q4UIGwFt8yQupZr3"
+    }
+  ]
+}

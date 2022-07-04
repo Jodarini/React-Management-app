@@ -1,0 +1,26 @@
+@import "../variables_module.scss";
+
+.article-list {
+	display: flex;
+	flex-direction: column;
+	background-color: $neutral-100;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	width: min(400px, 90%);
+	border-radius: 0.3em;
+	overflow: hidden;
+	padding: 1em !important;
+	color: $regular-black;
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+	&__articles {
+		> :first-child {
+			border-top: 1px solid rgba(41, 41, 41, 0.144);
+		}
+	}
+}
+
+.MuiList-root {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}

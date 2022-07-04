@@ -1,0 +1,82 @@
+@import "../variables_module.scss";
+
+.MuiListItem-root .MuiTouchRipple-child {
+	background-color: hsl(210, 100%, 56%) !important;
+}
+
+.button__settings {
+	width: 1em;
+	height: 1em;
+}
+
+.article {
+	border-bottom: 1px solid rgba(41, 41, 41, 0.144);
+
+	img {
+		max-width: 25%;
+		object-fit: cover;
+		aspect-ratio: 1;
+		align-self: center;
+		border-radius: 1rem;
+		max-height: 25%;
+		flex-basis: 25%;
+	}
+
+	&.selected {
+		background-color: hsla(225, 43%, 56%, 20%);
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	p {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	span {
+		color: $regular-gray;
+		text-transform: uppercase;
+		font-size: $font-size-200;
+		font-weight: 800;
+		font-size: 11px;
+	}
+
+	&__title {
+		display: flex;
+		width: 100%;
+
+		h5 {
+			margin-bottom: $spacing-05;
+			width: 100%;
+		}
+
+		&__category {
+			background-color: #5e76bf;
+			max-width: fit-content;
+			height: fit-content;
+			padding: 4px 1em;
+			border-radius: 1rem;
+			color: #ffffff;
+			font-size: 0.625rem;
+			letter-spacing: 0.1rem;
+			text-transform: uppercase;
+			margin-bottom: $spacing-05;
+		}
+	}
+
+	&__properties {
+		flex-basis: 70%;
+
+		&__value {
+			color: $regular-black !important;
+			max-width: 8em;
+			word-break: break-all;
+			font-weight: 700;
+		}
+	}
+}

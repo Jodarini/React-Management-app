@@ -1,0 +1,15 @@
+@import "../variables_module.scss";
+
+nav {
+	background-color: $primary-color;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    @include BoxShadow(1);
+	ol {
+		display: flex;
+		gap: 1em;
+		list-style: none;
+		padding: $spacing-1;
+	}
+}

@@ -1,0 +1,16 @@
+.button {
+	&--state-success {
+		color: fff;
+		background-color: greenyellow;
+		border-color: none;
+	}
+
+	&--state-danger {
+		color: red;
+	}
+}
+
+.button__settings {
+	width: 1em;
+	height: 1em;
+}
