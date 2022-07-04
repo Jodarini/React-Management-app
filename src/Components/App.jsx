@@ -5,7 +5,8 @@ import Navbar from "./Navbar";
 import ModalEdit from "./ModalEdit";
 const backend2 = "http://192.168.1.14:5000/articles";
 
-const backend = "https://62c360c4876c4700f53b819c.mockapi.io/articles/";
+const backend =
+	"https://62c360c4876c4700f53b819c.mockapi.io/articles/";
 // const backend = "https://demo6384318.mockable.io/";
 // http://localhost:8000/articles
 export default function App() {
@@ -158,7 +159,7 @@ export default function App() {
 		} else {
 			data = demoJson.articles;
 		}
-		setArticles(prev => [...prev, data]);
+		setArticles(prev => [data, ...prev]);
 	};
 
 	//Select articles
