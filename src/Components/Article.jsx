@@ -61,12 +61,6 @@ export default function Article({
 								</span>
 							</p>
 							<p>
-								<span>Cantidad</span>
-								<span className="article__properties__value">
-									{article.cantidad}
-								</span>
-							</p>
-							<p>
 								<span>Referencia</span>
 								<span className="article__properties__value">
 									{article.referencia}
