@@ -30,7 +30,7 @@ export default function Navbar({
 								color="primary"
 								variant="outlined"
 								type="text"
-								label="Filtrar"
+								label="Filter"
 								size="small"
 								onChange={e => setQ(e.target.value.toLowerCase())}
 							/>

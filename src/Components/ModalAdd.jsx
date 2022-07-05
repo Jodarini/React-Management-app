@@ -89,7 +89,7 @@ export default function Form({
 						<form onSubmit={handleSubmit}>
 							<div className="form__inputs">
 								<FormControl sx={{ m: 1, minWidth: 120 }}>
-									<InputLabel id="demo-simple-select-helper-label">Categoría</InputLabel>
+									<InputLabel id="demo-simple-select-helper-label">Category</InputLabel>
 									<Select
 										type="text"
 										name="categoria"
@@ -106,7 +106,7 @@ export default function Form({
 									<TextField
 										type="text"
 										name="nombre"
-										label="Nombre"
+										label="Name"
 										onChange={handleChange}
 										value={article.nombre}
 									/>
@@ -115,7 +115,7 @@ export default function Form({
 									<TextField
 										type="text"
 										name="referencia"
-										label="Referencia"
+										label="Reference"
 										onChange={handleChange}
 										value={article.referencia}
 									/>
@@ -124,7 +124,7 @@ export default function Form({
 									<TextField
 										type="text"
 										name="precio"
-										label="Precio"
+										label="Price"
 										onChange={handleChange}
 										value={article.precio}
 									/>
@@ -134,7 +134,7 @@ export default function Form({
 									<Select
 										type="text"
 										name="talla"
-										label="Talla"
+										label="Size"
 										onChange={handleChange}
 										value={article.talla}
 									>
@@ -149,7 +149,7 @@ export default function Form({
 									<TextField
 										type="number"
 										name="cantidad"
-										label="Cantidad"
+										label="Quantity"
 										onChange={handleChange}
 										value={article.cantidad}
 									/>
@@ -157,7 +157,7 @@ export default function Form({
 							</div>
 
 							<div className="d-flex justify-content-end gap-1 ModalAdd__button-container">
-								<Button onClick={e => onModalClose(e)}>Cancelar</Button>
+								<Button onClick={e => onModalClose(e)}>Cancel</Button>
 								<Button
 									variant="contained"
 									id={"boton-" + nanoid()}
@@ -165,7 +165,7 @@ export default function Form({
 									type="primary"
 									text="here"
 								>
-									Agregar
+									Add
 								</Button>
 							</div>
 						</form>

@@ -14,7 +14,9 @@ export default function ArticleList({
 	return (
 		<List className="article-list">
 			<i className="text-right small-font">
-				{articles.length} artículos
+				{articles.length > 0
+					? articles.length + " items"
+					: "no items found"}
 			</i>
 
 			<TransitionGroup className="article-list__articles">
