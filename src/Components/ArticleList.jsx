@@ -7,7 +7,6 @@ import Collapse from "@mui/material/Collapse";
 
 export default function ArticleList({
 	articles,
-	onDelete,
 	toggleSelect,
 	handleOpen,
 	openPopup,

@@ -170,7 +170,6 @@ export default function App() {
 		article.isChecked = !article.isChecked;
 		setSelectedArticles(thisArticles);
 		anySelected(articles);
-		console.log("IS THERE A CHECKED ITEM?" + isAnyChecked);
 	};
 
 	const [isAnyChecked, setIsAnyChecked] = useState(false);
@@ -236,7 +235,8 @@ export default function App() {
 				article =>
 					article.nombre.toLowerCase().indexOf(q) > -1 ||
 					article.categoria.toLowerCase().indexOf(q) > -1 ||
-					article.referencia.toLowerCase().indexOf(q) > -1 ||
+					article.referencia.toString().toLowerCase().indexOf(q) >
+						-1 ||
 					article.talla.toLowerCase().indexOf(q) > -1
 			);
 		} else return;

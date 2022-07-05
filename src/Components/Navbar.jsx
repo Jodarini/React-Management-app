@@ -8,7 +8,6 @@ export default function Navbar({
 	setQ,
 	isAnyChecked,
 }) {
-	console.log("isanyChecked = " + isAnyChecked);
 	return (
 		<nav className={isAnyChecked ? "alternative-color" : null}>
 			<ol>
