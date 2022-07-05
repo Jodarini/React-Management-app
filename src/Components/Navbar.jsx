@@ -13,26 +13,30 @@ export default function Navbar({
 			<ol>
 				{isAnyChecked && (
 					<li>
-						<Button onClick={deleteArticles}>Delete</Button>
-					</li>
-				)}
-				{!isAnyChecked && (
-					<li>
-						<Button variant="contained" onClick={handleOpen}>
-							Add
+						<Button variant="outlined" onClick={deleteArticles}>
+							Delete
 						</Button>
 					</li>
 				)}
-				<li>
-					<TextField
-						color="primary"
-						variant="outlined"
-						type="text"
-						label="Filtrar"
-						size="small"
-						onChange={e => setQ(e.target.value.toLowerCase())}
-					/>
-				</li>
+				{!isAnyChecked && (
+					<>
+						<li>
+							<Button variant="contained" onClick={handleOpen}>
+								Add
+							</Button>
+						</li>
+						<li>
+							<TextField
+								color="primary"
+								variant="outlined"
+								type="text"
+								label="Filtrar"
+								size="small"
+								onChange={e => setQ(e.target.value.toLowerCase())}
+							/>
+						</li>
+					</>
+				)}
 			</ol>
 		</nav>
 	);
