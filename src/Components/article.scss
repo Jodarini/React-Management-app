@@ -49,6 +49,7 @@
 	&__title {
 		display: flex;
 		width: 100%;
+		word-break: break-word;
 
 		h5 {
 			margin-bottom: $spacing-05;
