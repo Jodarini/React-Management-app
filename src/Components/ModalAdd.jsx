@@ -7,6 +7,10 @@ import "./ModalAdd.scss";
 import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
 import Fade from "@mui/material/Fade";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
 
 export default function Form({
 	addArticle,
@@ -84,60 +88,72 @@ export default function Form({
 					<Box sx={style}>
 						<form onSubmit={handleSubmit}>
 							<div className="form__inputs">
-								<TextField
-									variant="filled"
-									className="form__input"
-									type="text"
-									name="categoria"
-									label="Categoría"
-									onChange={handleChange}
-									value={article.categoria}
-								/>
-								<TextField
-									variant="filled"
-									className="form__input"
-									type="text"
-									name="nombre"
-									label="Nombre"
-									onChange={handleChange}
-									value={article.nombre}
-								/>
-								<TextField
-									variant="filled"
-									className="form__input"
-									type="text"
-									name="referencia"
-									label="Referencia"
-									onChange={handleChange}
-									value={article.referencia}
-								/>
-								<TextField
-									variant="filled"
-									className="form__input"
-									type="text"
-									name="precio"
-									label="Precio"
-									onChange={handleChange}
-									value={article.precio}
-								/>
-								<TextField
-									variant="filled"
-									className="form__input"
-									type="text"
-									name="talla"
-									label="Talla"
-									onChange={handleChange}
-									value={article.talla}
-								/>
-								<TextField
-									variant="filled"
-									className="form__input"
-									type="number"
-									name="cantidad"
-									label="Cantidad"
-									onChange={handleChange}
-									value={article.cantidad}
-								/>
+								<FormControl sx={{ m: 1, minWidth: 120 }}>
+									<InputLabel id="demo-simple-select-helper-label">Categoría</InputLabel>
+									<Select
+										type="text"
+										name="categoria"
+										label="Categoría"
+										onChange={handleChange}
+										value={article.categoria}
+									>
+										<MenuItem value="camisetas">Camisetas</MenuItem>
+										<MenuItem value="pantalones">Pantalónes</MenuItem>
+										<MenuItem value="Zapatos">Zapatos</MenuItem>
+									</Select>
+								</FormControl>
+								<FormControl sx={{ m: 1, minWidth: 120 }}>
+									<TextField
+										type="text"
+										name="nombre"
+										label="Nombre"
+										onChange={handleChange}
+										value={article.nombre}
+									/>
+								</FormControl>
+								<FormControl sx={{ m: 1, minWidth: 120 }}>
+									<TextField
+										type="text"
+										name="referencia"
+										label="Referencia"
+										onChange={handleChange}
+										value={article.referencia}
+									/>
+								</FormControl>
+								<FormControl sx={{ m: 1, minWidth: 120 }}>
+									<TextField
+										type="text"
+										name="precio"
+										label="Precio"
+										onChange={handleChange}
+										value={article.precio}
+									/>
+								</FormControl>
+								<FormControl sx={{ m: 1, minWidth: 120 }}>
+									<InputLabel id="demo-simple-select-helper-label">Talla</InputLabel>
+									<Select
+										type="text"
+										name="talla"
+										label="Talla"
+										onChange={handleChange}
+										value={article.talla}
+									>
+										<MenuItem value="XS">XS</MenuItem>
+										<MenuItem value="S">S</MenuItem>
+										<MenuItem value="M">M</MenuItem>
+										<MenuItem value="L">L</MenuItem>
+										<MenuItem value="XL">XL</MenuItem>
+									</Select>
+								</FormControl>
+								<FormControl sx={{ m: 1, minWidth: 120 }}>
+									<TextField
+										type="number"
+										name="cantidad"
+										label="Cantidad"
+										onChange={handleChange}
+										value={article.cantidad}
+									/>
+								</FormControl>
 							</div>
 
 							<div className="d-flex justify-content-end gap-1 ModalAdd__button-container">
