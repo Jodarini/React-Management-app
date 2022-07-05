@@ -17,7 +17,7 @@ export default function Article({
 		toggleSelect(article.id);
 	}, []);
 	const bind = useLongPress(enabled ? callback : null, {
-		threshold: 400,
+		threshold: 350,
 		cancelOnMovement: true,
 	});
 	return (
@@ -35,7 +35,6 @@ export default function Article({
 							article={article}
 							size="small"
 							content="EDIT"
-							
 						/>
 						<div className="article__title">
 							<h5>{article.nombre}</h5>
@@ -44,7 +43,7 @@ export default function Article({
 							</p>
 						</div>
 
-						<img src={shirt} alt="Foto" />
+						<img src={article.image} alt="Foto" />
 						<div className="article__properties">
 							<p>
 								<span>Precio</span>
