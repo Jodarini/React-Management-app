@@ -4,14 +4,21 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import YButton from "./YButton";
 import { useLongPress } from "use-long-press";
+import { useCallback } from "react";
+import { useState } from "react";
 
 export default function Article({
 	article,
 	toggleSelect,
 	openPopup,
 }) {
-	const onLongPress = useLongPress(() => {
+	const [enabled, setEnabled] = useState(true);
+	const callback = useCallback(event => {
 		toggleSelect(article.id);
+	}, []);
+	const bind = useLongPress(enabled ? callback : null, {
+		threshold: 400,
+		cancelOnMovement: true,
 	});
 	return (
 		<ListItem
@@ -21,7 +28,7 @@ export default function Article({
 			}`}
 		>
 			<ListItemButton>
-				<div {...onLongPress()}>
+				<div {...bind()}>
 					<div className="article__content">
 						<YButton
 							openPopup={openPopup}
