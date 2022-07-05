@@ -3,13 +3,17 @@ import shirt from "../Assets/shirt.jpg";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import YButton from "./YButton";
-
+import { useLongPress } from "use-long-press";
 
 export default function Article({
 	article,
 	toggleSelect,
 	openPopup,
 }) {
+	const onLongPress = useLongPress(() => {
+		toggleSelect(article.id);
+		console.log("longpressed" + article.id);
+	});
 	return (
 		<ListItem
 			disablePadding
@@ -18,7 +22,7 @@ export default function Article({
 			}`}
 		>
 			<ListItemButton>
-				<div onClick={(e) => toggleSelect(article.id, e)}>
+				<div {...onLongPress()}>
 					<div className="article__content">
 						<YButton
 							openPopup={openPopup}
