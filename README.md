@@ -6,11 +6,11 @@ Created for demo porpuses only.
 
 ## Functionalities
 
-Add items.
-Select and delete multiple items.
-Edit entries.
-Filter based on name/category/size/reference.
-Number of items.
+- Add items.
+- Select and delete multiple items.
+- Edit entries.
+- Filter based on name/category/size/reference.
+- Number of items.
 
 ## REST-API thanks to Mockapi.io
 Items will have random propierties (Faker.js)
