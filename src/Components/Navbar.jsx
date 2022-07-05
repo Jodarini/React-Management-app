@@ -6,18 +6,24 @@ export default function Navbar({
 	deleteArticles,
 	handleOpen,
 	setQ,
+	isAnyChecked,
 }) {
+	console.log("isanyChecked = " + isAnyChecked);
 	return (
-		<nav>
+		<nav className={isAnyChecked ? "alternative-color" : null}>
 			<ol>
-				<li>
-					<Button onClick={deleteArticles}>Delete</Button>
-				</li>
-				<li>
-					<Button variant="contained" onClick={handleOpen}>
-						Add
-					</Button>
-				</li>
+				{isAnyChecked && (
+					<li>
+						<Button onClick={deleteArticles}>Delete</Button>
+					</li>
+				)}
+				{!isAnyChecked && (
+					<li>
+						<Button variant="contained" onClick={handleOpen}>
+							Add
+						</Button>
+					</li>
+				)}
 				<li>
 					<TextField
 						color="primary"

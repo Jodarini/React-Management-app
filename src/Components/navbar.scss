@@ -2,14 +2,31 @@
 
 nav {
 	background-color: $primary-color;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    @include BoxShadow(1);
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	@include BoxShadow(1);
+	transition: background-color 350ms ease-out;
 	ol {
 		display: flex;
 		gap: 1em;
 		list-style: none;
 		padding: $spacing-1;
+	}
+}
+
+.alternative-color {
+	background-color: $secundary-color !important;
+	button {
+		color: #fafafa !important;
+	}
+	fieldset {
+		border-color: #fafafa9c !important;
+	}
+	label {
+		color: #fafafa9c !important;
+	}
+	input {
+		color: #fafafa !important;
 	}
 }

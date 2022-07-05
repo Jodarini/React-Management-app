@@ -12,7 +12,6 @@ export default function Article({
 }) {
 	const onLongPress = useLongPress(() => {
 		toggleSelect(article.id);
-		console.log("longpressed" + article.id);
 	});
 	return (
 		<ListItem

@@ -169,6 +169,20 @@ export default function App() {
 		);
 		article.isChecked = !article.isChecked;
 		setSelectedArticles(thisArticles);
+		anySelected(articles);
+		console.log("IS THERE A CHECKED ITEM?" + isAnyChecked);
+	};
+
+	const [isAnyChecked, setIsAnyChecked] = useState(false);
+
+	useEffect(() => {
+		anySelected(articles);
+	}, [articles]);
+
+	const anySelected = articles => {
+		if (articles.some(e => e.isChecked)) {
+			setIsAnyChecked(true);
+		} else setIsAnyChecked(false);
 	};
 
 	//Delete articles
@@ -243,6 +257,7 @@ export default function App() {
 					deleteArticles={deleteArticles}
 					handleOpen={handleOpen}
 					setQ={setQ}
+					isAnyChecked={isAnyChecked}
 				/>
 				<div className="container">
 					<ModalAdd
@@ -286,6 +301,7 @@ export default function App() {
 					deleteArticles={deleteArticles}
 					handleOpen={handleOpen}
 					setQ={setQ}
+					isAnyChecked={isAnyChecked}
 				/>
 				<div className="container">
 					<ModalAdd
