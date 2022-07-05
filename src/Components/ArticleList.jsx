@@ -11,32 +11,28 @@ export default function ArticleList({
 	toggleSelect,
 	handleOpen,
 	openPopup,
-
 }) {
 	return (
-	<List className="article-list">
-		<i className="text-right small-font">
-			{articles.length} artículos
-		</i>
+		<List className="article-list">
+			<i className="text-right small-font">
+				{articles.length} artículos
+			</i>
 
-		<TransitionGroup className="article-list__articles">
-			{articles.map(article => (
-				<Collapse key={article.id}>
-					<Article
-						article={article}
-						toggleSelect={toggleSelect}
+			<TransitionGroup className="article-list__articles">
+				{articles.map(article => (
+					<Collapse key={article.id}>
+						<Article
+							article={article}
+							toggleSelect={toggleSelect}
+							openPopup={openPopup}
+						/>
+					</Collapse>
+				))}
+			</TransitionGroup>
 
-						openPopup={openPopup}
-
-					/>
-				</Collapse>
-			))}
-		</TransitionGroup>
-
-		<Button onClick={onDelete}>Delete</Button>
-		<Button variant="contained" onClick={handleOpen}>
-			Add
-		</Button>
-	</List>
-);
+			<Button variant="contained" onClick={handleOpen}>
+				Add
+			</Button>
+		</List>
+	);
 }
